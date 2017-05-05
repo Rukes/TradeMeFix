@@ -41,24 +41,23 @@ public class MoneyFix implements TradeModeInterface {
     @Override
     public HashMap<String, Object> getLocale() {
         HashMap<String, Object> map = new HashMap<String, Object>();
-        map.put("Button.Name", "&2Zvýšit nabídku o &6[amount]");
+        map.put("Button.Name", "&2Increase money amount by &6[amount]");
         map.put("Button.Lore",
-                Arrays.asList("&eKlikni &6levým &epro &6zvýšení &ehodnoty",
-                        "&eKlikni &6pravých &epro &6snížení &ehodnoty",
-                        "&eDrž &6SHIFT &epro znásobení &6x10",
-                        "&eÚčet &o(ty máš)&e: &6[balance]&e$",
-                        "&eAktuální peněžní nabídka: &6[offer] [taxes]",
-                        "&ePo dokončení ti zůstane: &6[sourcekredit]&e$"));
-        map.put("ToggleButton.Name", "&2Zahájit peněžní nabídku");
+                Arrays.asList("&6Left &eclick to &6increase &eamount",
+                        "&6Right &eclick to &6decrease &eamount",
+                        "&eHold &6SHIFT &eto multiply &6x10",
+                        "&eYour account &e: &6[balance]&e$",
+                        "&eYour actual money offer: &6[offer] [taxes]"));
+        map.put("ToggleButton.Name", "&2Click to start money offer");
         map.put("ToggleButton.Lore", Arrays.asList(
-                "&eAktuální peněžní nabídka: &6[amount] [taxes]"));
-        map.put("OfferedButton.Name", "&aPeněžní nabídka &ahráče &2[player]");
+                "&eActual money offer: &6[amount] [taxes]"));
+        map.put("OfferedButton.Name", "&2[player]'s &amoney offer");
         map.put("OfferedButton.Lore", Arrays.asList(
-                "&eAktuální peněžní nabídka: &6[amount] [taxes]"));
-        map.put("Error", "&c[playername] nemá dostatek peněz!");
-        map.put("Limit", "&cChyba, nemáš dostatek peněz! Nastavena maximální hodnota [amount].");
-        map.put("ChangedOffer", "&eHráč &6[playername] &ezměnil peněžní nabídku na &6[amount]&e.");
-        map.put("Got", "&eObdržel jsi &6[amount]&e$");
+                "&eActual money offer: &6[amount] [taxes]"));
+        map.put("Error", "&c[playername] hasn't enough money!");
+        map.put("Limit", "&cYou hasn't enough money, settting up maximum value [amount].");
+        map.put("ChangedOffer", "&ePlayer &6[playername] &ehas changed the money offer to &6[amount]&e.");
+        map.put("Got", "&eYou have recived &6[amount]&e$");
         map.put("log", "&e[amount]&7$");
         return map;
     }
