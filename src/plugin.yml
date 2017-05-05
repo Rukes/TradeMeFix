@@ -1,0 +1,5 @@
+name: TradeMeFix
+version: 1.0
+main: eu.rukes.tradefix.Register
+author: Rukes
+softdepend: [TradeMe]
