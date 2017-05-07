@@ -176,11 +176,11 @@ public class MoneyFix implements TradeModeInterface {
         }
 
         if (button.isLeftClick()) {
-            if (offerAmount + amount > playerBalance) {
-                trade.setOffer(at, playerBalance);
-                trade.getP1().sendMessage(plugin.getMessage("Prefix") + plugin.getMessage(at, "Limit", "[amount]", offerAmount));
-            } else {
+            if (offerAmount + amount <= playerBalance) {
                 trade.addOffer(at, amount);
+            /*} else {
+                trade.setOffer(at, playerBalance);
+                trade.getP1().sendMessage(plugin.getMessage("Prefix") + plugin.getMessage(at, "Limit", "[amount]", offerAmount));*/
             }
         }
         if (button.isRightClick()) {
